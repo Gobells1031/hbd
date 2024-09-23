@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Riddle - Part 3</title>
+    <style>
+        body {
+            background-image: url('file:///C:/Users/shrig/OneDrive/Pictures/Saved%20Pictures/Desktop/New%20folder/New%20folder/Bday/4.png'); /* Change to your image */
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            cursor: pointer;
+        }
+        .next-button {
+            display: none; /* Hidden by default */
+            background-color: #4caf50; /* Green background for the next button */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday!</h1>
+    <div class="text-box">
+        <p>Solve the riddle to unlock the surprise:</p>
+        <p><strong>In the summer's heat, an incomplete tale,<br>
+A boy and a girl, their hearts set to sail.<br>
+Misunderstandings threatened to pull them apart,<br>
+But blessings arrived, uniting each heart.<br>
+<br>
+Like a song that whispers of love's sweet refrain,<br>
+What month brought them close, easing their pain?<br>
+When the warmth of the sun helped their feelings rise,<br>
+Their incomplete story found a beautiful guise.<br></strong></p>
+    </div>
+
+    <input type="text" id="answer" placeholder="Your answer here">
+    <button onclick="checkAnswer()">Submit</button>
+
+    <div id="message"></div>
+
+    <div id="video-container">
+        <h2>Congratulations! Here's your surprise:</h2>
+        <iframe id="birthday-video" width="600" height="400" src="https://drive.google.com/file/d/1-03D_9NrzHJvVUT-X6feXjuUpSkBC9rB/preview" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <button class="next-button" onclick="location.href='file:///C:/Users/shrig/OneDrive/Pictures/Saved%20Pictures/Desktop/New%20folder/New%20folder/Bday/final%20page.html'">Finish</button>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.trim().toLowerCase();
+            const message = document.getElementById('message');
+            const videoContainer = document.getElementById('video-container');
+            const video = document.getElementById('birthday-video');
+            const nextButton = document.querySelector('.next-button');
+
+            if (answer === 'august') {
+                message.textContent = "Correct!";
+                videoContainer.style.display = 'block';
+                video.requestFullscreen();
+                nextButton.style.display = 'inline-block'; // Show the next button
+            } else {
+                message.textContent = "Try again!";
+                videoContainer.style.display = 'none';
+                nextButton.style.display = 'none'; // Hide the next button
+            }
+        }
+    </script>
+</body>
+</html>
