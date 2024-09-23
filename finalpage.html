@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Collage</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            opacity: 0; /* Start with invisible */
+            transition: opacity 1s ease; /* Transition effect */
+        }
+        img {
+            width: 300px; /* Adjust as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin: 10px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Light shadow */
+            transition: transform 0.3s ease; /* Transition effect for scaling */
+        }
+        img:hover {
+            transform: scale(1.1); /* Scale image on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday Ranuuu....😘</h1>
+    <p><h3>Sketches done by me!</h3></p>
+    
+    <div class="collage">
+        <img src="IMG_0088.PNG" alt="Moment 1">
+                <img src="IMG_E0103.jpg" alt="Moment 3">
+               <!-- Add more images as needed -->
+    </div>
+
+    <script>
+        // Fade in effect
+        window.onload = function() {
+            document.body.style.opacity = 1; // Make body visible
+        }
+    </script>
+</body>
+</html>
